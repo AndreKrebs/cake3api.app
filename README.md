@@ -25,6 +25,10 @@ Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
 
 ## Database
+Create database:
+```bash
+CREATE SCHEMA `cake3api_app` DEFAULT CHARACTER SET utf8 ;
+```
 
 Run this command for import data to database:
 ```bash
