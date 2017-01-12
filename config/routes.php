@@ -43,7 +43,11 @@ use Cake\Routing\Route\DashedRoute;
  */
 Router::defaultRouteClass(DashedRoute::class);
 
-Router::extensions(['json', 'xml']);
+Router::prefix('api', function ($routes) {
+    // extensions é opcional
+    $routes->extensions(['json', 'xml']);
+    $routes->resources('Cocktails');
+});
 
 Router::scope('/', function (RouteBuilder $routes) {
     /**
@@ -58,8 +62,6 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
     
-    $routes->resources('Cocktails');
-
     
     /**
      * Connect catchall routes for all controllers.
