@@ -9,15 +9,10 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 
 ## Installation
 
-1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
-
-If Composer is installed globally, run
+Clone this project.
 ```bash
-composer create-project --prefer-dist cakephp/app [app_name]
+git clone https://github.com/AndreKrebs/cake3api.app.git
 ```
-
-You should now be able to visit the path to where you installed the app and see the default home page.
 
 ## Configuration
 
@@ -30,7 +25,8 @@ Copy the file `config/app.default.php` to `config/app.php`, read and edit `confi
 
 
 ## Database
-Create database:
+
+Create database Mysql:
 ```bash
 CREATE SCHEMA `cake3api_app` DEFAULT CHARACTER SET utf8 ;
 ```
