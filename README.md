@@ -21,8 +21,13 @@ You should now be able to visit the path to where you installed the app and see 
 
 ## Configuration
 
-Read and edit `config/app.php` and setup the 'Datasources' and any other
-configuration relevant for your application.
+Run this command to install the dependencies:
+```bash
+php composer.phar install
+```
+
+Copy the file `config/app.default.php` to `config/app.php`, read and edit `config/app.php` and setup the 'Datasources'.
+
 
 ## Database
 Create database:
