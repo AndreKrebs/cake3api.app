@@ -47,6 +47,9 @@ Router::prefix('api', function ($routes) {
     // extensions é opcional
     $routes->extensions(['json', 'xml']);
     $routes->resources('Cocktails');
+    $routes->resources('Users');
+    Router::connect('/api/users/register', ['controller' => 'Users', 'action' => 'add', 'prefix' => 'api']);
+    $routes->fallbacks('InflectedRoute');
 });
 
 Router::scope('/', function (RouteBuilder $routes) {
