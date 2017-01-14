@@ -28,6 +28,10 @@ class AppController extends Controller
             ]
         ]);
         $this->loadComponent('Auth', [
+            'authorize' => [
+//                 'Controller',
+                'Burzum/SimpleRbac.SimpleRbac'
+            ],
             'storage' => 'Memory',
             'authenticate' => [
                 'Form' => [
@@ -46,5 +50,15 @@ class AppController extends Controller
             'unauthorizedRedirect' => false,
             'checkAuthIn' => 'Controller.initialize'
         ]);
+        
     }
+    
+    public function isAuthorized($user = null)
+    {
+        
+//        print_r($user); exit;
+        
+        return true;
+    }
+    
 }

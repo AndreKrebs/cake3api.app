@@ -224,3 +224,8 @@ if (Configure::read('debug')) {
 Plugin::load('Crud');
 
 Plugin::load('ADmad/JwtAuth');
+
+Plugin::load('Burzum/SimpleRbac');
+
+// load configuration rbac validation authorize
+Configure::load('rbac');
