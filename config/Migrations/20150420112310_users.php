@@ -17,7 +17,12 @@ class Users extends AbstractMigration
                 'limit' => 255,
                 'null' => false
             ])
-            ->addColumn('active', 'boolean', [
+            ->addColumn('active', 'string', [
+                'default' => 'user',
+                'null' => false,
+                'limit' => 20
+            ])
+            ->addColumn('role', 'boolean', [
                 'default' => 0,
                 'null' => true
             ])
