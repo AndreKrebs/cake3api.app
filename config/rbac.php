@@ -9,7 +9,7 @@ $config = [
         ],*/
         'actionMap' => [
             'Cocktails'=> [
-                '*'  => ['', 'author', 'admin']
+                '*'  => ['user', 'author', 'admin']
             ]
         ]
     ]
