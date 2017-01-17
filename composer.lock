@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e3d504d94a1c5d6a4399f9c9fc03dcf",
+    "content-hash": "b30f52299d3ff591dfe263af3fa907ef",
     "packages": [
         {
             "name": "admad/cakephp-jwt-auth",
@@ -1626,6 +1626,7 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
+        "cakephp/migrations": 0,
         "psy/psysh": 0
     },
     "prefer-stable": true,

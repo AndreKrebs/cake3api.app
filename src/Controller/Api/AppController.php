@@ -29,8 +29,10 @@ class AppController extends Controller
         ]);
         $this->loadComponent('Auth', [
             'authorize' => [
-//                 'Controller',
-                'Burzum/SimpleRbac.SimpleRbac'
+//                'Controller',
+                'Burzum/SimpleRbac.SimpleRbac' => [
+                    'roleField'=>'role_id'
+                ]
             ],
             'storage' => 'Memory',
             'authenticate' => [
@@ -51,14 +53,6 @@ class AppController extends Controller
             'checkAuthIn' => 'Controller.initialize'
         ]);
         
-    }
-    
-    public function isAuthorized($user = null)
-    {
-        
-//        print_r($user); exit;
-        
-        return true;
     }
     
 }

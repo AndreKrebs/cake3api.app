@@ -221,11 +221,17 @@ if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 
+// load configuration rbac validation authorize
+Configure::load('rbac');
+
+
 Plugin::load('Crud');
 
 Plugin::load('ADmad/JwtAuth');
 
 Plugin::load('Burzum/SimpleRbac');
 
-// load configuration rbac validation authorize
-Configure::load('rbac');
+Plugin::load('Migrations');
+
+
+

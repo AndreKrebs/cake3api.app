@@ -4,19 +4,15 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * User Entity
+ * Role Entity
  *
  * @property int $id
- * @property string $username
- * @property string $password
- * @property int $role_id
- * @property bool $active
+ * @property string $role
  * @property \Cake\I18n\Time $created
- * @property \Cake\I18n\Time $modified
  *
- * @property \App\Model\Entity\Role $role
+ * @property \App\Model\Entity\User[] $users
  */
-class User extends Entity
+class Role extends Entity
 {
 
     /**
@@ -32,19 +28,4 @@ class User extends Entity
         '*' => true,
         'id' => false
     ];
-
-    /**
-     * Fields that are excluded from JSON versions of the entity.
-     *
-     * @var array
-     */
-    protected $_hidden = [
-        'password'
-    ];
-    
-    protected function _setPassword($password)
-    {
-        return (new DefaultPasswordHasher)->hash($password);
-    }
-    
 }

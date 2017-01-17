@@ -1,15 +1,14 @@
 <?php
 
+// ROLE
+// 1 - user
+// 2 - admin
+
 $config = [
     'SimpleRbac' => [
-        /*'roles' => [
-            'authors',
-            'admin',
-//            'user',
-        ],*/
         'actionMap' => [
             'Cocktails'=> [
-                '*'  => ['user', 'author', 'admin']
+                '*'  => [1, 2]
             ]
         ]
     ]
