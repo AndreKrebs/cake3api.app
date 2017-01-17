@@ -23,6 +23,7 @@ php composer.phar install
 
 Copy the file `config/app.default.php` to `config/app.php`, read and edit `config/app.php` and setup the 'Datasources'.
 
+In `/vendor/burzum/cakephp-simple-rbac/src/Auth/SimpleRbacAuthorize.php`, comment the IF `if (is_string($user[$roleField]))` because this plugin(ROLE) it does not allow validate numbers!
 
 ## Database
 
@@ -60,6 +61,7 @@ Execute this command in terminal to create a new user and getting the access tok
 curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: 0f0fb402-9747-1a74-ec8d-75a9c27727c1" -d '{
 	"username":"admin",
 	"password":"admin",
+    "role_id":2,
 	"active":true
 }' "http://localhost/cake3api.app/api/users/register"
 ```
