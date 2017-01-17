@@ -23,7 +23,7 @@ Run this command to install the dependencies:
 php composer.phar install
 ```
 
-In `/vendor/burzum/cakephp-simple-rbac/src/Auth/SimpleRbacAuthorize.php`, comment the IF `if (is_string($user[$roleField]))` because this plugin(ROLE) it does not allow validate numbers!
+In `vendor/burzum/cakephp-simple-rbac/src/Auth/SimpleRbacAuthorize.php`, comment the IF `if (is_string($user[$roleField]))` because this plugin(ROLE) it does not allow validate numbers!
 
 ## Database
 
