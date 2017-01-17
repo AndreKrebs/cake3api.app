@@ -93,6 +93,12 @@ class Initial extends AbstractMigration
             ->update();
         
         $this->execute(
+            "INSERT INTO `roles` (`id`,`role`,`created`) VALUES ".
+            "(1,'user','2017-01-15 16:03:08'), ".
+            "(2,'admin','2017-01-15 16:03:08') "
+        );
+        
+        $this->execute(
             "INSERT INTO `cocktails` VALUES " .
             "('1', 'Cosmopolitan', 'Vodka based', '2015-04-10 15:56:23', null)," .
             "('2', 'Margarita', 'Tequila based', '2015-04-10 15:59:39', null)," .
@@ -117,11 +123,7 @@ class Initial extends AbstractMigration
             "('21', 'Beach Runner', 'Gin based', '2015-04-11 09:52:03', null)"
         );
         
-        $this->execute(
-            "INSERT INTO `roles` (`id`,`role`,`created`) VALUES ".
-            "(1,'user','2017-01-15 16:03:08')".
-            "(2,'admin','2017-01-15 16:03:08')"
-        );
+        
     }
 
     public function down()
