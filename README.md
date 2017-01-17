@@ -70,3 +70,11 @@ curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" -
 ```bash
 curl -X GET -H "Accept: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTQ4NDgzNzU3N30.XjzTVNFIJ-P1S2wMHml-mNSW1PUOrKQ53iybi0RGP_4" -H "Cache-Control: no-cache" -H "Postman-Token: 819cdbce-24c4-66ae-42ab-41a55f12752a" "http://localhost/cake3api.app/api/cocktails"
 ```
+
+### Refresh User Token
+```bash
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: a3ac3027-def7-ee09-7380-81e4b903bf3b" -d '{
+	"username":"admin",
+	"password":"admin"
+}' "http://cake3api.app/api/users/token"
+```
