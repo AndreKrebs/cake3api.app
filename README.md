@@ -16,12 +16,12 @@ git clone https://github.com/AndreKrebs/cake3api.app.git
 
 ## Configuration
 
+Copy the file `config/app.default.php` to `config/app.php`, read and edit `config/app.php` and setup the 'Datasources'.
+
 Run this command to install the dependencies:
 ```bash
 php composer.phar install
 ```
-
-Copy the file `config/app.default.php` to `config/app.php`, read and edit `config/app.php` and setup the 'Datasources'.
 
 In `/vendor/burzum/cakephp-simple-rbac/src/Auth/SimpleRbacAuthorize.php`, comment the IF `if (is_string($user[$roleField]))` because this plugin(ROLE) it does not allow validate numbers!
 
