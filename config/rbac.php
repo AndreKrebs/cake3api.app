@@ -8,7 +8,7 @@ $config = [
     'SimpleRbac' => [
         'actionMap' => [
             'Cocktails'=> [
-                '*'  => [1, 2]
+                'index'  => ['1', '2']
             ]
         ]
     ]
