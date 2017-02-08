@@ -37,6 +37,14 @@ Run this command for import data to database:
 ```bash
 bin/cake migrations migrate
 ```
+
+## More Configuration!
+Run this command:
+
+```bash
+bin/cake plugin load ADmad/JwtAuth
+```
+
 ## Testing
 
 #### Access not authorizing
